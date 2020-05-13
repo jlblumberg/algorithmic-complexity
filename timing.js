@@ -12,12 +12,30 @@ const createTestArray = () => {
   return result;
 }
 
+const average = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+const tenThrowAwayRuns = (arr, fnc) => {
+  for (let run = 1; run < 11; run++) {
+    fnc.apply(arr);
+  }
+}
+
 const measureTime = (arr, fnc) => {
-  const t0 = performance.now();
-  fnc.apply(arr)
-  const t1 = performance.now();
-  const time = t1 - t0
-  return time;
+  let runsToAverage = []
+  tenThrowAwayRuns(arr, fnc);
+  for (let run = 1; run < 51; run++) {
+    const t0 = performance.now();
+    fnc.apply(arr);
+    const t1 = performance.now();
+    runsToAverage.push(t1 - t0);
+  }
+  return average(runsToAverage);
 }
 
 const runPerformanceTest = methodOfChoice => {
