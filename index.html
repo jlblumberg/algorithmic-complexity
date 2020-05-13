@@ -6,6 +6,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script type="text/javascript" src="timing.js"></script>
   <script>window.data = dataForChartJs(inbuiltReverse);</script>
+  <script>window.method = 'Reverse';</script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <title>My charts</title>
 </head>
@@ -21,7 +22,7 @@
       type: 'line',
       data: {
         datasets: [{
-          label: 'dataset',
+          label: method,
           data: data
         }]
       },
@@ -29,7 +30,19 @@
         scales: {
           xAxes: [{
             type: 'linear',
-            position: 'bottom'
+            position: 'bottom',
+            scaleLabel: {
+              display: true,
+              labelString: 'Array Length (elements)'
+            }
+          }],
+          yAxes: [{
+            type: 'linear',
+            position: 'left',
+            scaleLabel: {
+              display: true,
+              labelString: 'Time (ms)'
+            }
           }]
         }
       }

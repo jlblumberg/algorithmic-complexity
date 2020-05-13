@@ -3,7 +3,7 @@ const inbuiltReverse = Array.prototype.reverse
 // Create array of arrays. Each array has random ints between 1 and 100.
 const createTestArray = () => {
   let result = [];
-  for (let length = 5000; length <= 100000; length += 5000) {
+  for (let length = 0; length <= 100000; length += 5000) {
     result.push(
       Array.from({ length: length }, () => Math.floor(Math.random() * 100))
     );
