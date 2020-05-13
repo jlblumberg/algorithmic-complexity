@@ -18,6 +18,8 @@
   <script>
     let myChart = document.getElementById('myChart').getContext('2d');
 
+    Chart.defaults.global.defaultFontColor = 'black';
+
     let performanceChart = new Chart(myChart, {
       type: 'line',
       data: {
