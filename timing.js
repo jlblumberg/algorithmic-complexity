@@ -13,13 +13,20 @@ const createTestArray = () => {
 }
 
 // For calculating an average
-const average = (arr) => {
+const mean = arr => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum / arr.length;
 }
+
+// For calculating the median
+const median = arr => {
+  let mid = Math.floor(arr.length / 2)
+  let nums = [...arr].sort((a, b) => a - b);
+  return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+};
 
 // Run the func on the array 10 times and do nothing with it
 const tenThrowAwayRuns = (arr, fnc) => {
@@ -30,15 +37,15 @@ const tenThrowAwayRuns = (arr, fnc) => {
 
 // Do throw away runs, then time the fnc 50 times and average the result
 const measureTime = (arr, fnc) => {
-  let runsToAverage = []
+  let runs = [];
   tenThrowAwayRuns(arr, fnc);
   for (let run = 1; run < 51; run++) {
     const t0 = performance.now();
     fnc.apply(arr);
     const t1 = performance.now();
-    runsToAverage.push(t1 - t0);
+    runs.push(t1 - t0);
   }
-  return average(runsToAverage);
+  return mean(runs);
 }
 
 // Run the timer on the array of arrays
