@@ -1,5 +1,6 @@
-// Save the built in 
-const inbuiltReverse = Array.prototype.reverse
+// Save the built in functions
+const reverse = Array.prototype.reverse
+const sort = Array.prototype.sort
 
 // Create array of arrays. Each array has random ints between 1 and 100.
 const createTestArray = () => {
