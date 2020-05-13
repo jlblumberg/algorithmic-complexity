@@ -1,3 +1,4 @@
+// Save the built in 
 const inbuiltReverse = Array.prototype.reverse
 
 // Create array of arrays. Each array has random ints between 1 and 100.
@@ -11,7 +12,7 @@ const createTestArray = () => {
   return result;
 }
 
-// for calculating an average
+// For calculating an average
 const average = (arr) => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -20,14 +21,14 @@ const average = (arr) => {
   return sum / arr.length;
 }
 
-// fun the func on the array 10 times and do nothing with it
+// Run the func on the array 10 times and do nothing with it
 const tenThrowAwayRuns = (arr, fnc) => {
   for (let run = 1; run < 11; run++) {
     fnc.apply(arr);
   }
 }
 
-// do throw away runs, then time the fnc 50 times and average the result
+// Do throw away runs, then time the fnc 50 times and average the result
 const measureTime = (arr, fnc) => {
   let runsToAverage = []
   tenThrowAwayRuns(arr, fnc);
@@ -40,7 +41,7 @@ const measureTime = (arr, fnc) => {
   return average(runsToAverage);
 }
 
-// run the timer on the array of arrays
+// Run the timer on the array of arrays
 const runPerformanceTest = methodOfChoice => {
   data = {}
   let testArray = createTestArray();
@@ -50,7 +51,7 @@ const runPerformanceTest = methodOfChoice => {
   return data;
 };
 
-// format data for chart.js
+// Format data for chart.js
 const dataForChartJs = (fnc) => {
   let formattedData = [];
   let unformattedData = runPerformanceTest(fnc);
