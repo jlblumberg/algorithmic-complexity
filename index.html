@@ -23,7 +23,9 @@
       data: {
         datasets: [{
           label: method,
-          data: data
+          data: data,
+          fill: false,
+          borderColor: '#00008b'
         }]
       },
       options: {
@@ -44,6 +46,11 @@
               labelString: 'Time (ms)'
             }
           }]
+        },
+        legend: {
+          labels: {
+            boxWidth: 0
+          }
         }
       }
     });
