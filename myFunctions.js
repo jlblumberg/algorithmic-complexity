@@ -1,7 +1,9 @@
 const myFunctions = {}
 
 myFunctions.myReverse = (arr) => {
-  return arr.reverse();
+  arr.push(arr[0])
+  arr.shift()
+  return arr
 }
 
 // check if we are in browser or mocha, only export for mocha
