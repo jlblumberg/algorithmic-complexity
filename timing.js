@@ -1,8 +1,8 @@
-// Save the built in functions
+// Save the built-in functions
 const reverse = Array.prototype.reverse
 const sort = Array.prototype.sort
 
-// Create array of arrays. Each array has random ints between 1 and 100.
+// Create array of arrays. Each array has random integers between 1 and 100.
 const createTestArray = () => {
   let result = [];
   for (let length = 0; length <= 100000; length += 5000) {
@@ -13,7 +13,7 @@ const createTestArray = () => {
   return result;
 }
 
-// For calculating an average
+// For calculating the average
 const mean = arr => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {

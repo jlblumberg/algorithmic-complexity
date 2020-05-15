@@ -1,0 +1,24 @@
+{
+  "name": "algorithmic-complexity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "mocha ./*test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlblumberg/algorithmic-complexity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlblumberg/algorithmic-complexity/issues"
+  },
+  "homepage": "https://github.com/jlblumberg/algorithmic-complexity#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  }
+}
