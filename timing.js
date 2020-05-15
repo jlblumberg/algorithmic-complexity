@@ -1,6 +1,7 @@
-// Save the built-in functions
-const reverse = Array.prototype.reverse
-const sort = Array.prototype.sort
+// Wrap functions in blocks for later use
+const reverse = arr => { arr.reverse() }
+const sort = arr => { arr.sort() }
+const myReverse = arr => { myFunctions.myReverse(arr) }
 
 // Create array of arrays. Each array has random integers between 1 and 100.
 const createTestArray = () => {
@@ -32,7 +33,7 @@ const median = arr => {
 // Run the func on the array 10 times and do nothing with it
 const tenThrowAwayRuns = (arr, fnc) => {
   for (let run = 1; run < 11; run++) {
-    fnc.apply(arr);
+    fnc(arr);
   }
 }
 
@@ -42,7 +43,7 @@ const measureTime = (arr, fnc) => {
   tenThrowAwayRuns(arr, fnc);
   for (let run = 1; run < 51; run++) {
     const t0 = performance.now();
-    fnc.apply(arr);
+    fnc(arr);
     const t1 = performance.now();
     runs.push(t1 - t0);
   }
