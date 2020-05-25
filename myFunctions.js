@@ -1,7 +1,7 @@
 const myFunctions = {}
 
 myFunctions.myReverse = (arr) => {
-  newArr = []
+  let newArr = []
   while (arr.length > 0) {
     newArr.push(arr.pop());
   }

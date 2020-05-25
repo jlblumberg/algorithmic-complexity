@@ -1,7 +1,7 @@
 // Wrap functions in blocks for later use
-const reverse = arr => { arr.reverse() }
-const sort = arr => { arr.sort() }
-const myReverse = arr => { myFunctions.myReverse(arr) }
+const reverse = arr => arr.reverse();
+const sort = arr => arr.sort();
+const myReverse = arr => myFunctions.myReverse(arr);
 
 // Create array of arrays. Each array has random integers between 1 and 100.
 const createTestArray = () => {
@@ -37,6 +37,7 @@ const tenThrowAwayRuns = (arr, fnc) => {
   }
 }
 
+// NOTE: change arr below to be length, and build the array within this func. Current issue is that the inbuilt reverse empties the array in place, so all runs after first are on an empty array, averaging to near zero.
 // Do throw away runs, then time the fnc 50 times and average the result
 const measureTime = (arr, fnc) => {
   let runs = [];
