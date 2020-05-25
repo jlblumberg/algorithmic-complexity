@@ -14,17 +14,17 @@ The timing function (see timing.js) measures the performance of other functions.
 In order to get a sense of an algorithms complexity, we measure the time it takes to run as the length of the input increases. For this exercise, inputs were measured from length 0 to 100000 in increments of 5000. These exercises were all done with arrays as the input data structure. 
 
 ### Smoothing performance
-A few measures were taken to smooth out the data. First, there are  some 'throw-away' runs before the real measurement runs to account for warmup time. The timer also returns the median of 50 runs to account for outliers due to competition for CPU at any one time. 
+A few measures were taken to smooth out the data. There are  some 'throw-away' runs before the real measurement runs to account for warmup time. The timer also returns the median of 50 runs to account for outliers due to competition for CPU at any one time. 
 
 ### Plotting the results
 The timer's results are stored in an object and plotted using Chart.js. The Chart.js settings can be found in index.html.
 
 ## <a name="Inbuilt_vs_Homemade">Inbuilt vs Homemade</a>
-You can use the timer function to test the performance of any other function. Here are the results of the inbuilt reverse function in JavaScript:
+The timer function can be used to test the performance of any other function. Here are the results of the inbuilt reverse function in JavaScript:
 
 ![Inbuilt Reverse](https://link_here.png)
 
-You can see that it is linear (or O(n)). Next, I crafted my own homemade reverse function, to try to match or beat the inbuilt one. You can see it in myFunctions.js. See its complexity plot:
+You can see that it is linear (or O(n)). To learn about creating efficient algorithms, I crafted my own homemade reverse function, to try to match or beat the inbuilt one. You can see it in myFunctions.js. See its complexity plot:
 
 ![Homemade Reverse](https://link_here.png)
 
