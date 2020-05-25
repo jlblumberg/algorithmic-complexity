@@ -6,10 +6,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script type="text/javascript" src="myFunctions.js"></script>
   <script type="text/javascript" src="timing.js"></script>
-  <!-- Change the param on the below line to one of reverse, sort, etc (see timing.js for your options) -->
-  <script>window.data = dataForChartJs(myReverse);</script>
-  <!-- Change the value on the below line to the function you chose (updates graph title) -->
-  <script>window.method = 'myRreverse';</script>
+  <script>let methodUnderTest = reverse;</script>
+  <!-- Change the value on the above line to one of reverse, sort, etc (see timing.js for your options) -->
+  <script>window.data = dataForChartJs(methodUnderTest);</script>
+  <script>window.method = methodUnderTest.name;</script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <title>My charts</title>
 </head>
