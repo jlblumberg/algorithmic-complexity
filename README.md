@@ -1,6 +1,6 @@
 ### Algorithmic Complexity
 
-[Outline](#Outline) | [Implementation Details](#Implementation_Details) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
+[Outline](#Outline) | [Implementation Details](#Implementation_Details) | [Inbuilt vs Homemade](#Inbuilt_vs_Homemade) | [Tech stack](#Tech_stack) | [Future work](#Future_work)
 
 ## <a name="Outline">Outline</a>
 
@@ -19,4 +19,27 @@ A few measures were taken to smooth out the data. First, there are  some 'throw-
 ### Plotting the results
 The timer's results are stored in an object and plotted using Chart.js. The Chart.js settings can be found in index.html.
 
+## <a name="Inbuilt_vs_Homemade">Inbuilt vs Homemade</a>
+You can use the timer function to test the performance of any other function. Here are the results of the inbuilt reverse function in JavaScript:
 
+![Inbuilt Reverse](https://link_here.png)
+
+You can see that it is linear (or O(n)). Next, I crafted my own homemade reverse function, to try to match or beat the inbuilt one. You can see it in myFunctions.js. See its complexity plot:
+
+![Homemade Reverse](https://link_here.png)
+
+You can see that it is also linear (or O(n)).
+
+## <a name="Tech_stack">Tech stack</a>
+
+Front-end:
+- HTML & CSS
+- Chart.js
+
+Back-end:
+- Node.js
+- Mocha
+
+## <a name="Future_work">Future work</a>
+
+Next up, making my own shuffle algorithm.
