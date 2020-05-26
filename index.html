@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <script type="text/javascript" src="myFunctions.js"></script>
-  <script type="text/javascript" src="timing.js"></script>
-  <script>let methodUnderTest = reverse;</script>
+  <script type="text/javascript" src="new_timing.js"></script>
+  <script>let firstMethodUnderTest = reverse;</script>
+  <script>let secondMethodUnderTest = myReverse;</script>
   <!-- Change the value on the above line to one of reverse, sort, etc (see timing.js for your options) -->
-  <script>window.data = dataForChartJs(methodUnderTest);</script>
-  <script>window.method = methodUnderTest.name;</script>
+  <script>window.firstMethodData = runPerformanceTest(firstMethodUnderTest);</script>
+  <script>window.firstMethodName = firstMethodUnderTest.name;</script>
+  <script>window.secondMethodData = runPerformanceTest(secondMethodUnderTest);</script>
+  <script>window.secondMethodName = secondMethodUnderTest.name;</script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <title>My charts</title>
 </head>
@@ -26,12 +29,20 @@
     let performanceChart = new Chart(myChart, {
       type: 'line',
       data: {
-        datasets: [{
-          label: `${method} Function`,
-          data: data,
+        datasets: [
+          {
+          label: `${firstMethodName} Function`,
+          data: firstMethodData,
           fill: false,
-          borderColor: '#00008b'
-        }]
+          borderColor: '#000000'
+          },
+          {
+            label: `${secondMethodName} Function`,
+            data: secondMethodData,
+            fill: false,
+            borderColor: '#00008b'
+          }
+        ]
       },
       options: {
         scales: {
@@ -54,7 +65,7 @@
         },
         legend: {
           labels: {
-            boxWidth: 0
+            boxWidth: 10
           }
         }
       }

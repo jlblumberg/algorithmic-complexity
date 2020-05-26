@@ -1,14 +1,16 @@
-const myFunctions = {}
+"use strict";
+
+const myFunctions = {};
 
 myFunctions.myReverse = (arr) => {
-  let newArr = []
+  let newArr = [];
   while (arr.length > 0) {
     newArr.push(arr.pop());
-  }
-  return newArr
+  };
+  return newArr;
 }
 
 // check if we are in browser or mocha, only export for mocha
 if (typeof window == 'undefined') {
-  module.exports = myFunctions
+  module.exports = myFunctions;
 }

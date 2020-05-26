@@ -1,3 +1,5 @@
+"use strict";
+
 // Wrap functions in blocks for later use
 const reverse = arr => arr.reverse();
 const sort = arr => arr.sort();
