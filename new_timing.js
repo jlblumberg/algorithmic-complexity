@@ -21,9 +21,13 @@ const measureTime = (length, fnc) => {
   let runs = [];
   for (let run = 1; run < 51; run++) {
     let arrayToTest = createTestArrayOfLength(length);
+    // console.log('arraytotest')
+    // console.log(arrayToTest);    
     const t0 = performance.now();
-    fnc(arrayToTest);
+    let arrayAfterTest = fnc(arrayToTest);
     const t1 = performance.now();
+    // console.log('arrayaftertest')
+    // console.log(arrayAfterTest); 
     runs.push(t1 - t0);
   }
   return median(runs);
