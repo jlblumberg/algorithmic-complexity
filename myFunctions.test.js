@@ -39,8 +39,15 @@ describe('myBinarySearch', () => {
   });
 
   it('returns the index of the element if it\'s in the array', () => {
-    let arr = [1, 2, 3, 4, 5];
-    expect(myFunctions.myBinarySearch(arr, 3)).to.equal(2);
+    let arr = [0, 1, 2, 3, 4, 5];
+    expect(myFunctions.myBinarySearch(arr, 3)).to.equal(3);
   });
+
+  it('works on a large array', () => {
+    let arr = Array.from({ length: 10000 }, (j, k) => k);
+    expect(myFunctions.myBinarySearch(arr, 5)).to.equal(5);
+  });
+
+
 
 });
