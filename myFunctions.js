@@ -12,7 +12,7 @@ myFunctions.myReverse = (arr) => {
 }
 
 // binary search
-myFunctions.myBinarySearch = (arr) => {
+myFunctions.myBinarySearch = (arr, item) => {
  return -1
 }
 

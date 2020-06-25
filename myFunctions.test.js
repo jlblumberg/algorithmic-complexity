@@ -29,8 +29,13 @@ describe('myReverse', () => {
 describe('myBinarySearch', () => {
 
   it('returns -1 if given an empty array', () => {
-    let arr = []
-    expect(myFunctions.myBinarySearch(arr)).to.equal(-1);
+    let arr = [];
+    expect(myFunctions.myBinarySearch(arr, 5)).to.equal(-1);
+  });
+
+  it('returns -1 if element isn\'t in the array', () => {
+    let arr = [1, 2, 3, 4, 5];
+    expect(myFunctions.myBinarySearch(arr, 6)).to.equal(-1);
   });
 
 });
