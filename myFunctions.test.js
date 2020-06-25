@@ -38,4 +38,9 @@ describe('myBinarySearch', () => {
     expect(myFunctions.myBinarySearch(arr, 6)).to.equal(-1);
   });
 
+  it('returns the index of the element if it\'s in the array', () => {
+    let arr = [1, 2, 3, 4, 5];
+    expect(myFunctions.myBinarySearch(arr, 3)).to.equal(2);
+  });
+
 });
