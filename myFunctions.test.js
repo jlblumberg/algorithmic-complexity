@@ -48,6 +48,4 @@ describe('myBinarySearch', () => {
     expect(myFunctions.myBinarySearch(arr, 5)).to.equal(5);
   });
 
-
-
 });
